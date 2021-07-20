@@ -1,9 +1,17 @@
 (function ($, window, document, undefined) {
+  "use strict";
 
-  'use strict';
+  $(document).ready(() => {
+    ("use strict");
+    function toggleSidebar() {
+      $(".menu").click(() => {
+        $("nav.sidebar").addClass("display");
+      });
+      $(".close-nav").click(() => {
+        $("nav.sidebar").removeClass("display");
+      });
+    }
 
-  $(function () {
-    // FireShell
+    toggleSidebar();
   });
-
 })(jQuery, window, document);
